@@ -113,7 +113,7 @@ git checkout -b feature/your-idea
 
 ## License
 
-MIT © [Your Name](https://github.com/yourusername)
+MIT © [7\](https://github.com/Franciss-prog)
 
 ---
 
