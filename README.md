@@ -41,13 +41,13 @@ Inspired by Spotify Wrapped, GitWrapped digs through your commit history and pre
 ```bash
 # Clone the repo
 git clone https://github.com/Franciss-prog/git-wrapped.git
-cd gitwrapped
+cd git-wrapped
 
 # Build
-go build -o gitwrapped .
+go build -o git-wrapped .
 
 # Run
-./gitwrapped
+./git-wrapped
 ```
 
 > **Requirements:** Go 1.21+ and at least one local Git repository to analyze.
@@ -58,37 +58,67 @@ go build -o gitwrapped .
 
 ```bash
 # Analyze the current year (default)
-./gitwrapped
+./git-wrapped
 
 # Analyze a specific year
-./gitwrapped --year 2023
+./git-wrapped --year 2023
 
 # Point to a custom repos directory
-./gitwrapped --dir ~/projects
+./git-wrapped --dir ~/projects
 
 # Export your summary as text
-./gitwrapped --export summary.txt
+./git-wrapped --export summary.txt
 ```
+
+When `--export` is set, GitWrapped writes a plain-text summary and exits without launching the terminal UI.
 
 ---
 
 ## Preview
 
 ```
-+==========================================+
-|         YOUR 2024 WRAPPED                |
-+==========================================+
-|  Total Commits     ████████████  1,337   |
-|  Active Repos      ██████░░░░░░     12   |
-|  Top Language      Go            68%     |
-|  Longest Streak    ░░░░░░░░░░░░  21 days |
-|                                          |
-|  You are a:  MIDNIGHT HACKER             |
-|  Peak coding hour: 11 PM - 2 AM          |
-+==========================================+
+git-wrapped/
+│
+├── cmd/
+│ └── git-wrapped/
+│ └── main.go
+│
+├── internal/
+│ ├── git/
+│ ├── stats/
+│ ├── tui/
+│ └── export/
+│
+├── README.md
+├── LICENSE
+├── go.mod
+└── go.sum
 ```
 
 ---
+
+## Example Output
+
+```
++==========================================+
+| YOUR 2024 WRAPPED |
++==========================================+
+| Total Commits ████████████ 1,337 |
+| Active Repos ██████░░░░░░ 12 |
+| Top Language Go 68% |
+| Longest Streak ░░░░░░░░░░░░ 21 days |
+| |
+| You are a: MIDNIGHT HACKER |
+| Peak coding hour: 11 PM - 2 AM |
++==========================================+
+
+```
+
+---
+
+## File Structure
+
+````
 
 ## Roadmap
 
@@ -107,7 +137,7 @@ Contributions are welcome! Please open an issue first to discuss what you'd like
 ```bash
 # Fork -> branch -> commit -> PR
 git checkout -b feature/your-idea
-```
+````
 
 ---
 
