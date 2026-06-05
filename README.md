@@ -40,7 +40,7 @@ Inspired by Spotify Wrapped, GitWrapped digs through your commit history and pre
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/gitwrapped.git
+git clone https://github.com/Franciss-prog/git-wrapped.git
 cd gitwrapped
 
 # Build
