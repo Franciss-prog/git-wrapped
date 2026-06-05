@@ -74,7 +74,7 @@ When `--export` is set, GitWrapped writes a plain-text summary and exits without
 
 ---
 
-## Preview
+## File Structure
 
 ```
 git-wrapped/
@@ -97,7 +97,7 @@ git-wrapped/
 
 ---
 
-## Example Output
+## Preview
 
 ```
 +==========================================+
